@@ -13,7 +13,10 @@ import java.util.Scanner;
 
 public class Main
 {
-
+    /**
+     * Entry point for our application
+     * @param args of array of command line parameters
+     */
     public static void main(String[] args)
     {
         // definition Scanner It allows get input from the user.
@@ -34,6 +37,8 @@ public class Main
             System.out.print("Please enter your age: ");
             try
             {
+                // nextFloat() method would try to convert into the float type number
+                // It's why we are using try catch block
                 age = keyboard.nextFloat();
                 isValidInput = true;
 
@@ -45,7 +50,11 @@ public class Main
             }
             catch (InputMismatchException inputMismatchException)
             {
-                System.out.println("Error: Entry for age must be a float type number.");
+                // in a case of using general kind exception such as e might
+                // catch an error but would not show a reason as error = null
+                System.out.printf("Error: %s ", inputMismatchException.getMessage());
+                // Line above can show us type of exception by using getMessage() method
+                System.out.println("\nError: Entry for age must be a float type number.");
                 keyboard.nextLine();
                 isValidInput = false;
             }
