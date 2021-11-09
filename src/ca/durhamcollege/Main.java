@@ -19,8 +19,10 @@ public class Main
         // definition Scanner It allows get input from the user.
         Scanner keyboard = new Scanner(System.in);
 
-        // Input part
+        // Input
+        // It can be initialized as null or empty "" marks
         String name = null;
+        // Other way printout can be println
         System.out.print("Please enter your name: ");
         name = keyboard.nextLine();
 
